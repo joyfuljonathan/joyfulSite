@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<title>Product Detail</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {height: 100%; line-height: 1.8;}
+
+.w3-bar .w3-button { padding: 16px; }
+
+.nav-logo {
+  height: 36px;
+  width: auto;
+}
+
+.product-image {
+  max-width: 100%;
+}
+
+.thumb {
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.thumb.active {
+  border: 2px solid #000;
+}
+
+.spec-table td, .spec-table th {
+  padding: 6px 10px;
+}
+</style>
+
+<body class="w3-light-grey">
+
+<!-- ================= NAVBAR ================= -->
+<!-- ================= NAVBAR ================= -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <!-- <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a> -->
+    <a href="#home" class="w3-bar-item w3-button w3-wide">  <img src="img/joyfulUSA.png" alt="Company Logo" class="nav-logo">
+</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="index.html#about" class="w3-bar-item w3-button"> <i class="fa fa-industry"></i>ABOUT</a>
+      <!-- <a href="about.html" class="w3-bar-item w3-button">ABOUT</a> -->
+      <a href="index.html#team" class="w3-bar-item w3-button"><i class="fa fa-wrench"></i> NEW PRODUCTS</a>
+      <a href="products.html" class="w3-bar-item w3-button"><i class="fa fa-wrench"></i> PRODUCTS</a>
+      <!-- <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-cogs"></i> WORK</a> -->
+      <!-- <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-gavel"></i> Lorem.</a> -->
+      <a href="index.html#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- ================= SIDEBAR ================= -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left
+            w3-hide-medium w3-hide-large"
+     style="display:none" id="mySidebar">
+  <a href="javascript:void(0)"
+     onclick="w3_close()"
+     class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+
+  <a href="index.html#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="index.html#team" onclick="w3_close()" class="w3-bar-item w3-button">NEW PRODUCTS</a>
+  <a href="index.html#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Spacer for fixed navbar -->
+<div style="margin-top:80px"></div>
+
+<!-- ================= PRODUCT DETAIL ================= -->
+<div class="w3-container w3-padding-64">
+  <div class="w3-card w3-white w3-padding-large">
+
+    <div class="w3-row-padding">
+
+      <!-- ===== Images / Carousel ===== -->
+      <div class="w3-col l6 m6 s12 w3-center">
+
+        <img id="mainImage"
+             src="img/feature3.png"
+             alt="Product image"
+             class="product-image w3-round">
+
+        <div class="w3-row-padding w3-margin-top">
+
+          <div class="w3-col s3">
+            <img src="img/feature1.png"
+                 class="w3-image w3-hover-opacity thumb active"
+                 onclick="changeImage(this)">
+          </div>
+
+          <div class="w3-col s3">
+            <img src="img/feature2.png"
+                 class="w3-image w3-hover-opacity thumb"
+                 onclick="changeImage(this)">
+          </div>
+
+          <div class="w3-col s3">
+            <img src="img/feature3.png"
+                 class="w3-image w3-hover-opacity thumb"
+                 onclick="changeImage(this)">
+          </div>
+
+          <div class="w3-col s3">
+            <img src="img/feature4.png"
+                 class="w3-image w3-hover-opacity thumb"
+                 onclick="changeImage(this)">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ===== Product Info ===== -->
+      <div class="w3-col l6 m6 s12">
+        <h2>Product Name</h2>
+        <p class="w3-opacity">Catch phrase / short description</p>
+
+        <p class="w3-large"><strong>Contact for pricing</strong></p>
+
+        <p>
+          Phasellus eget enim eu lectus faucibus vestibulum.
+          Suspendisse sodales pellentesque elementum.
+          This section should clearly explain what the product is used for.
+        </p>
+
+        <button class="w3-button w3-black w3-margin-top">
+          <i class="fa fa-envelope"></i> Contact Us
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ================= SPECIFICATIONS ================= -->
+    <hr class="w3-margin-top w3-margin-bottom">
+
+    <h3>Specifications</h3>
+
+    <div class="w3-responsive">
+      <table class="w3-table w3-bordered w3-small spec-table">
+
+        <tr class="w3-light-grey">
+          <th>Category</th>
+          <th>Item</th>
+          <th>Specification</th>
+          <th>Notes</th>
+        </tr>
+
+        <tr>
+          <td rowspan="4"><strong>Material</strong></td>
+          <td>Main Body</td>
+          <td>Polypropylene (PP)</td>
+          <td>Standard</td>
+        </tr>
+        <tr>
+          <td>Reinforcement</td>
+          <td>Glass Fiber</td>
+          <td>Optional</td>
+        </tr>
+        <tr>
+          <td>Finish</td>
+          <td>Matte</td>
+          <td>Non-reflective</td>
+        </tr>
+        <tr>
+          <td>Color</td>
+          <td>Black / Gray</td>
+          <td>Standard</td>
+        </tr>
+
+        <tr>
+          <td rowspan="3"><strong>Dimensions</strong></td>
+          <td>Length</td>
+          <td>120 mm</td>
+          <td>±1 mm</td>
+        </tr>
+        <tr>
+          <td>Width</td>
+          <td>40 mm</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Height</td>
+          <td>30 mm</td>
+          <td>—</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2"><strong>Performance</strong></td>
+          <td>Operating Temperature</td>
+          <td>-20°C to +80°C</td>
+          <td>Continuous</td>
+        </tr>
+        <tr>
+          <td>Load Capacity</td>
+          <td>25 kg</td>
+          <td>Static</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2"><strong>Compliance</strong></td>
+          <td>RoHS</td>
+          <td>Compliant</td>
+          <td>EU</td>
+        </tr>
+        <tr>
+          <td>REACH</td>
+          <td>Compliant</td>
+          <td>EU</td>
+        </tr>
+
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#top" class="w3-button w3-light-grey">
+    <i class="fa fa-arrow-up w3-margin-right"></i>To the top
+  </a>
+
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+
+<!-- ================= JS ================= -->
+<script>
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  mySidebar.style.display =
+    mySidebar.style.display === 'block' ? 'none' : 'block';
+}
+
+function w3_close() {
+  mySidebar.style.display = "none";
+}
+
+function changeImage(el) {
+  document.getElementById("mainImage").src = el.src;
+
+  var thumbs = document.getElementsByClassName("thumb");
+  for (var i = 0; i < thumbs.length; i++) {
+    thumbs[i].classList.remove("active");
+  }
+  el.classList.add("active");
+}
+</script>
+
+</body>
+</html>
